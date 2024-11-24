@@ -228,7 +228,7 @@ class GrassRest(BaseClient):
         )
         async def approve_email_retry():
             headers = self.website_headers.copy()
-            headers['authorization'] = verify_token
+            headers['Authorization'] = verify_token
 
             url = f'https://api.getgrass.io/{endpoint}'
             response = await self.session.post(
